@@ -9,11 +9,11 @@ terraform {
 
 provider "google" {
 
-  credentials = file("keys/gcp-cryptocurrencies.json")
+  credentials = file(var.credentials_file)
 
-  project = "cryptocurrencies-313407"
-  region  = "us-central1"
-  zone    = "us-central1-a"
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 resource "google_compute_network" "vpc_network" {
