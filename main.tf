@@ -26,10 +26,14 @@ resource "google_compute_address" "vm_static_ip" {
 
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "zeroio-instance-0"
-  machine_type = "f1-micro"
+  name = "zeroio-instance-0"
+  machine_type = var.machine_types[var.environment]
 
-  tags = ["substrate", "zeroio", "node"]
+  tags = ["network", "zeroio"]
+
+  provisioner "local-exec" {
+    command = "echo ${google_compute_instance.vm_instance.name}:  ${google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip} >> ip_address.txt"
+  }
 
   boot_disk {
     initialize_params {
