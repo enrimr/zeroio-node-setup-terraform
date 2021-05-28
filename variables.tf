@@ -25,8 +25,18 @@ variable "environment" {
 variable "machine_types" {
   type    = map
   default = {
-    dev  = "f1-micro"
+  	dev2 = "e2-small"
+    dev  = "e2-standard-8"
     test = "n1-highcpu-32"
     prod = "n1-highcpu-32"
   }
 }
+
+variable "ssh_user" {
+	type = string
+	default = "zeroio"
+}
+
+variable "ssh_pub_key_file" {}
+
+variable "ssh_private_key_file" {}
