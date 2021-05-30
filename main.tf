@@ -51,7 +51,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   provisioner "file" {
-    source      = "scripts/test.sh"
+    source      = "scripts/create_zeroio_node.sh"
     destination = "/tmp/create_zeroio_node.sh"
 
     connection {
