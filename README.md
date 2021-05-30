@@ -1,3 +1,9 @@
+> :warning: **This Terraform script runs over Google Cloud Platform (GCP). If you use it to deploy your ZERO validator node, it will incurred into cost in your GCP billing account**. If you don't want to pay, you can use only the script create_zeroio_node.sh to install all tools and source code required for the node in the infrastructure that you decide.
+
+# INTRODUCTION
+
+This is a Terraform script to easily deploy a ZERO Validator Node.
+
 # CONFIGURATION
 
 This Terraform script requires to set up several mandatory variables. To configure that, there are several options.
@@ -61,3 +67,14 @@ Both of SUBDOMAIN and DOMAIN will be also used to configure letsencrypt and Apac
 # EXECUTION
 
 ` terraform apply`
+
+
+# LICENSE
+
+Copyright 2021 Enrique Mendoza @EnriMR
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
