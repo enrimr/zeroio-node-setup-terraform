@@ -24,13 +24,12 @@ Google Cloud Platform related parameters:
 | project |  GCP project id |  |
 | region | GCP region | us-central1 |
 | zone | GCP zone | us-central1 |
-| machine_types | This is a map to set up the machine types to run de VM | ```
+| machine_types | This is a map to set up the machine types to run de VM | 
   {
     dev  = "e2-standard-8"
     test = "n1-highcpu-32"
     prod = "n1-highcpu-32"
-  }
-  ``` |
+  } |
 
 There are several options to perform this configuration.
 
