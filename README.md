@@ -12,7 +12,7 @@ General parameters:
 
 | Field | Description | Default value |
 |-|-------------------------------|----------------------------|
-| environment | Environment type. Three valid values: dev, pre, pro. | dev |
+| environment | Environment type. Three valid values: dev, test, pro. | dev |
 | ssh_user | SSH user for the virtual machine | zeroio |
 | ssh_private_key_file | SSH private key to access the instance |  |
 | ssh_pub_key_file | SSH public key to access the instance |  |
@@ -24,12 +24,8 @@ Google Cloud Platform related parameters:
 | project |  GCP project id |  |
 | region | GCP region | us-central1 |
 | zone | GCP zone | us-central1 |
-| machine_types | This is a map to set up the machine types to run de VM | 
-  {
-    dev  = "e2-standard-8"
-    test = "n1-highcpu-32"
-    prod = "n1-highcpu-32"
-  } |
+| machine_types | This is a map to set up the machine types to run de VM | `{`<br>`dev  = "e2-standard-8"`<br>`test = "n1-highcpu-32"`<br>`prod = "n1-highcpu-32"`<br>`}` |
+
 
 There are several options to perform this configuration.
 
@@ -63,6 +59,7 @@ Follow the instructions here https://cloud.google.com/docs/authentication/gettin
 2. GENERATE PUBLIC/PRIVATE SSH KEYS
 
    Windows: https://phoenixnap.com/kb/generate-ssh-key-windows-10
+   
    OS X / LINUX: https://www.digitalocean.com/community/tutorials/how-to-create-ssh-keys-with-openssh-on-macos-or-linux
 
 3. EXECUTE TERRAFORM
